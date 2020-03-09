@@ -1,0 +1,55 @@
+<!-- index - потому что для того чтобы ф-л открывался первым -->
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset = "utf-8">
+        <link href="style_index.css" rel="stylesheet">
+        <title>form_Third</title>
+    </head>
+    <boby>
+        <h1 class="FormH1">Форма для регистрации участинков:</h1>
+        <form action="index1.php" method="POST" name="form">
+            <fieldset>
+                <legend>Личные данные</legend>
+                    <label for="userName">Имя:</label>
+                    <input class="personal_data" id="userName" type="text" name="userName" 
+                    placeholder="Введите Ваше имя" required><br>
+                    <!-- class="personal_data" -->
+                    <label for="userSurname">Фамилия:</label>
+                    <input class="personal_data" id="userSurname" type="text" 
+                    name="userSurname" placeholder="Введите Вашу Фамилия" required><br>
+                    <!-- Доабавил for и id для того чтобы слвязать label с input, теперь
+                    можно также, если input был в label при нажатии на надпись активируется 
+                    ячейка-->
+                    <!-- class="personal_data" -->
+                    <label for="userMail">Почта:</label>
+                    <input class="personal_data" id="userMail" type="email" name="userMail" 
+                    placeholder="Введите Вашу почту" required><!-- Должна быть ПОЧТА - типа  
+                    EMAIL -->
+                    <!-- class="personal_data" -->
+            </fieldset>
+            <fieldset>
+                <legend>Регистрация на курс(ы)</legend>
+                    <label> 
+                        <label>Выберите курс(ы), который хотите посещать:</label><br><br>
+                        <input id="PHP" type = "checkbox" name = "course[]" value="PHP" 
+                        checked>
+                        <label for="PHP">PHP</label><br>
+                        <input id="LISP" type = "checkbox" name = "course[]" value="LISP">
+                        <label for="LISP">LISP</label><br>
+                        <input id="C++" type = "checkbox" name = "course[]" value="C++">
+                        <label for="C++">C++</label><br>
+                        <input id="UNIX" type = "checkbox" name = "course[]" value="UNIX">
+                        <label for="UNIX">UNIX</label><br><br>
+
+                        <label>Что Вы хотите, чтобы мы знали о Вас<br><br>
+                            <textarea rows="5" cols="50">
+                            </textarea>
+                        </label><br>
+                        <input type="submit" value="Отправить">
+                        <input type="reset" value="Отменить">
+                    </label>
+            </fieldset>
+        </form>
+    </body>
+</html>
